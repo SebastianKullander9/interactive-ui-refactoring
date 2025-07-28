@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Header from "../components/Header";
-import RenderLesson from "../lessons/grayscale/GrayscaleLesson";
+import GrayscaleLesson from "../lessons/grayscale/GrayscaleLesson";
 
 export default function Exercise() {
     const [tailwind, setTailwind] = useState(true);
@@ -13,7 +13,7 @@ export default function Exercise() {
     return (
         <div>
             <Header tailwind={tailwind} toggleCode={toggleCode} />
-            <RenderLesson tailwind={tailwind}/>
+            <GrayscaleLesson tailwind={tailwind}/>
         </div>
     );
 }
