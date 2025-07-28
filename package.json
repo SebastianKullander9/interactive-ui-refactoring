@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@codemirror/highlight": "^0.19.8",
     "@codemirror/lang-html": "^6.4.9",
     "codemirror": "^6.0.2",
     "next": "15.4.4",

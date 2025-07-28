@@ -1,16 +1,10 @@
 "use client";
-import CodeArea from "./components/CodeArea";
-import IFrameArea from "./components/IFrameArea";
-import { useState } from "react";
-import { formGrayscaleHtmlTailwind } from "./lessons/grayscale/form-grayscale-html-tailwind";
+import RenderLesson from "./lessons/grayscale/RenderLesson";
 
-export default function Home() {
-	const [html, setHtml] = useState(formGrayscaleHtmlTailwind);
-	
+export default function Home() {	
     return (
-        <div className="w-full h-[100vh] bg-gray-50 flex">
-        	<CodeArea state={html} setState={setHtml} />
-			<IFrameArea html={html} />
+        <div>
+            <RenderLesson />
         </div>
     );
 }
