@@ -1,11 +1,4 @@
-export const formGrayscaleHtmlTailwind = `<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body>
-<div class="flex flex-col gap-8 w-full h-full bg-gray-100 p-16">
+export const formGrayscaleHtmlTailwind = `<div class="flex flex-col gap-8 w-full h-full bg-gray-100 p-16">
   <div class="flex justify-between items-center pb-6 border-b-2 border-y-gray-200">
     <p class="text-xl w-1/2 text-gray-900">Setup your storage and choose the size that is appropriate for you.</p>
 
@@ -74,6 +67,4 @@ export const formGrayscaleHtmlTailwind = `<!DOCTYPE html>
       </div>
     </div>
   </div>
-</div>
-</body>
-</html>`
+</div>`

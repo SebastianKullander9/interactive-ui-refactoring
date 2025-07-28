@@ -1,10 +1,13 @@
 "use client";
-import RenderLesson from "./lessons/grayscale/RenderLesson";
+import { useState } from "react";
+import RenderLesson from "./lessons/grayscale/GrayscaleLesson";
 
-export default function Home() {	
+export default function Home() {
+    const [tailwind, setTailwind] = useState(false);
+
     return (
         <div>
-            <RenderLesson />
+            <RenderLesson tailwind={tailwind}/>
         </div>
     );
 }

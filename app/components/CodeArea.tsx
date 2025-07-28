@@ -45,8 +45,8 @@ export default function CodeArea({state, setState}: CodeAreaProps) {
     }, [])
 
     return (
-        <div className="w-1/2 overflow-auto">
-            <div ref={editorRef} className=""></div>
+        <div className="">
+            <div ref={editorRef} className="overflow-auto h-[75vh] bg-gray-100"></div>
         </div>
     );
 }
