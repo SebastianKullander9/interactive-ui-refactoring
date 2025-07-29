@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import NavigationButtons from "./components/NavigationButtons";
 
 export default function Home() {
-    const [pageIndex, setPageIndex] = useState(0);
+    const [pageIndex, setPageIndex] = useState(3);
     const [phase, setPhase] = useState("start");
     const [tailwind, setTailwind] = useState(false);
 
@@ -31,7 +31,7 @@ export default function Home() {
     }, [pageIndex])
 
     return (
-        <div>
+        <div className="min-h-[100vh]">
             <Header tailwind={tailwind} toggleCode={toggleCode}/>
 
             {LessonComponent && typeof LessonComponent === "function" ? (
@@ -39,15 +39,17 @@ export default function Home() {
             ) : (
                 <div>No lesson found.</div>
             )}
-
-            <NavigationButtons 
-                lessons={lessons}
-                handlePrev={handlePrev}
-                handleNext={handleNext}
-                pageIndex={pageIndex}
-                setPageIndex={setPageIndex}
-                phase={phase}
-            />
+            
+            <div className="fixed bottom-0 pb-4 flex justify-center w-full">
+                <NavigationButtons 
+                    lessons={lessons}
+                    handlePrev={handlePrev}
+                    handleNext={handleNext}
+                    pageIndex={pageIndex}
+                    setPageIndex={setPageIndex}
+                    phase={phase}
+                />
+            </div>
         </div>
     );
 }

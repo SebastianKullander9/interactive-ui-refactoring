@@ -24,15 +24,19 @@ export default function GrayscaleLesson({ tailwind }: RenderLessonProps) {
     }
 
     return (
-        <div className="container mx-auto pt-4">
-            {tailwind ? <div className="flex gap-4">
-                <div className="w-1/2">
-                    <CodeArea state={BodyForTailwind} setState={setBodyForTailwind} />
-                </div>
-                <IFrameArea html={buildHtmlWithTailwind(BodyForTailwind)} />
-            </div> :
-                <div className="flex gap-4">
-                    <div className="w-1/2">
+        <div className="container mx-auto h-[calc(100vh-10rem)] pt-4 flex gap-4">
+            {tailwind ? 
+                <>
+                    <div className="h-full w-1/2 ">
+                        <CodeArea state={BodyForTailwind} setState={setBodyForTailwind} />
+                    </div>
+                    <div className="h-full w-full ">
+                        <IFrameArea html={buildHtmlWithTailwind(BodyForTailwind)} />
+                    </div>
+                </>
+            :
+                <>
+                    <div className="h-full w-1/2 ">
                         <div>
                             <div className="flex justify-center bg-gray-100">
                                 <button onClick={() => toggleHtml(true)} className={`bg-gray-100 py-2 px-4 cursor-pointer text-gray-800 font-semibold ${showHtml ? "bg-gray-300" : "hover:bg-gray-200"}`}>HTML</button>
@@ -43,9 +47,11 @@ export default function GrayscaleLesson({ tailwind }: RenderLessonProps) {
                             : <CodeArea key="css" state={css} setState={setCss} />
                         }
                     </div>
-                    <IFrameArea html={buildHtmlWithCss(BodyForCss, css)} />
-                </div>}
-            
+                    <div className="h-full w-1/2 ">
+                        <IFrameArea html={buildHtmlWithCss(BodyForCss, css)} />
+                    </div>
+                </>
+            }
         </div>
     );
 }

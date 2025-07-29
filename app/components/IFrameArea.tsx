@@ -4,7 +4,7 @@ interface IFrameAreaProps {
 
 export default function IFrameArea({html}: IFrameAreaProps) {
     return (
-        <div className="w-1/2">
+        <div className="h-full">
             <iframe
                 className="w-full h-full"
                 srcDoc={html}
