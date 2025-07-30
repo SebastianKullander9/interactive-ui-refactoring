@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import NavigationButtons from "./components/NavigationButtons";
 
 export default function Home() {
-    const [pageIndex, setPageIndex] = useState(3);
+    const [pageIndex, setPageIndex] = useState(8);
     const [phase, setPhase] = useState("start");
     const [tailwind, setTailwind] = useState(false);
 
