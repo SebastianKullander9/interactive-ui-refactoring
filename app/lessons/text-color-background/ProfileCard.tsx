@@ -33,7 +33,7 @@ export default function PersonCard({ phase }: { phase: number }) {
             <div className="w-full h-6/10 flex items-center text-center flex-row">
                 <p className="text-gray-700"><i>&quot;If you think good design is expensive, you should look at the cost of bad design.&quot;</i></p>
             </div>
-            <div className={`w-full h-4/10 ${cardBg} flex justify-center relative`}>
+            <div className={`w-full h-4/10 ${cardBg} flex justify-center relative rounded-br-xl rounded-bl-xl`}>
                 <div className="w-17 h-17 bg-white rounded-full absolute top-[-34px]">
                     <img src="/profile1.svg" alt="svg for a profile placeholder image"  className="p-1" />
                 </div>

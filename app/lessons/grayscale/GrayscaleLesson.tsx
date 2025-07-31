@@ -24,7 +24,7 @@ export default function GrayscaleLesson({ tailwind }: RenderLessonProps) {
     }
 
     return (
-        <div className="container mx-auto h-[calc(100vh-10rem)] pt-4 flex gap-4">
+        <div className="container mx-auto h-[calc(100vh-10rem)] pt-4 flex gap-8">
             {tailwind ? 
                 <>
                     <div className="h-full w-1/2 ">

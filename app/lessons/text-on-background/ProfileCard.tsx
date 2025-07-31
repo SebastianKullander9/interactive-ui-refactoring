@@ -1,4 +1,4 @@
-export default function PersonCard({ phase }: { phase: number }) {
+export default function ProfileCard({ phase }: { phase: number }) {
     const cardBg =
         phase === 1
         ? "bg-indigo-500"
@@ -21,12 +21,10 @@ export default function PersonCard({ phase }: { phase: number }) {
         phase === 1
         ? "text-gray-400"
         : phase === 2
-        ? "text-gray-500"
+        ? "text-gray-400"
         : phase === 3
         ? "text-white opacity-60"
         : "text-[#e0deff]"
-
-
 
     return (
         <div className="w-75 h-85 rounded-xl shadow-sm border-1 border-gray-200">

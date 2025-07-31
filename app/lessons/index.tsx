@@ -7,6 +7,7 @@ import SystematicalDesignExamples from "./systematical-design/SystematicalDesign
 import SystematicalDesignEnd from "./systematical-design/SystematicalDesignEnd";
 import VisualHierarchyIntro from "./visual-hierarchy/VisualHierarchyIntro";
 import HierarchySize from "./visual-hierarchy/HierarchySize";
+import IllustrateChanges from "./text-on-background/IllustrateChanges";
 
 export const lessons = [
     { id: 0, name: "start", component: Welcome, phase: "start" },
@@ -18,4 +19,5 @@ export const lessons = [
     { id: 6, name: "systematicalDesignEnd", component: SystematicalDesignEnd, phase: "ongoing" },
     { id: 7, name: "visualHierarchyIntro", component: VisualHierarchyIntro, phase: "ongoing" },
     { id: 8, name: "hierarchySize", component: HierarchySize, phase: "ongoing" },
+    { id: 9, name: "colorOnBackground", component: IllustrateChanges, phase: "ongoing" },
 ]
