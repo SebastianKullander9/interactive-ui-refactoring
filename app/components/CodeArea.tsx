@@ -9,9 +9,10 @@ import { html } from "@codemirror/lang-html";
 interface CodeAreaProps {
     state: string;
     setState: React.Dispatch<React.SetStateAction<string>>;
+    adjustHeight: boolean;
 }
 
-export default function CodeArea({state, setState}: CodeAreaProps) {
+export default function CodeArea({state, setState, adjustHeight}: CodeAreaProps) {
     const editorRef = useRef<HTMLDivElement>(null);
     const viewRef = useRef<EditorView | null>(null);
 
@@ -46,7 +47,7 @@ export default function CodeArea({state, setState}: CodeAreaProps) {
 
     return (
         <div className="">
-            <div ref={editorRef} className="overflow-auto h-[calc(100vh-215px)] bg-gray-100"></div>
+            <div ref={editorRef} className={`overflow-auto ${adjustHeight ? "h-[calc(100vh-215px)]" : ""} bg-gray-100`}></div>
         </div>
     );
 }

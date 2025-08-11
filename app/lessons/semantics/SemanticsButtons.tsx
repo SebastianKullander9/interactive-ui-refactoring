@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 
-export default function SemanticsCard() {
+export default function SemanticsButtons() {
     const [semanticsFixed, setSemanticsFixed] = useState(false);
 
     return (
-        <div>
-            <div>
-                <h1>Semantics are secondary</h1>
-                <p>When there is multiple options in a user interface its easy to fall into the trap of designing these
+        <div className="container mx-auto pt-8 h-[calc(100vh-10rem)] flex flex-row gap-8">
+            <div className="w-1/2">
+                <h1 className="text-gray-800 font-bold text-6xl pb-8">Semantics are secondary</h1>
+                <p className="max-w-prose text-gray-700">When there is multiple options in a user interface its easy to fall into the trap of designing these
                     options purely based on semantics. Dont get it wrong, semantics are an important part of designing
                     buttons, however hierarchy can&apos;t be forgotton. 
 
@@ -24,7 +24,7 @@ export default function SemanticsCard() {
                     By introducing a hierarchy first approach, the result is often a less busy UI that communicates more clearly
                 </p>
             </div>
-            <div>
+            <div className="w-1/2 flex flex-col justify-center gap-4">
                 <div className="w-[600px] h-[250px] flex flex-row border-1 border-gray-300 shadow-md rounded-md">
                     <div className="w-3/10 h-full bg-custompurple rounded-tl-md rounded-bl-md">
 
@@ -49,7 +49,7 @@ export default function SemanticsCard() {
                         </div>
                     </div>
                 </div>
-                <button onClick={() => setSemanticsFixed(!semanticsFixed)} className="p-4 bg-indigo-500 text-white font-bold rounded-md hover:bg-indigo-600 cursor-pointer">Next</button>
+                <button onClick={() => setSemanticsFixed(!semanticsFixed)} className="max-w-[150px] p-4 bg-indigo-500 text-white font-bold rounded-md hover:bg-indigo-600 cursor-pointer">Change style</button>
             </div>
         </div>
     );

@@ -28,7 +28,7 @@ export default function GrayscaleLesson({ tailwind }: RenderLessonProps) {
             {tailwind ? 
                 <>
                     <div className="h-full w-1/2 ">
-                        <CodeArea state={BodyForTailwind} setState={setBodyForTailwind} />
+                        <CodeArea state={BodyForTailwind} setState={setBodyForTailwind} adjustHeight={true} />
                     </div>
                     <div className="h-full w-full ">
                         <IFrameArea html={buildHtmlWithTailwind(BodyForTailwind)} />
@@ -43,8 +43,8 @@ export default function GrayscaleLesson({ tailwind }: RenderLessonProps) {
                                 <button onClick={() => toggleHtml(false)} className={`bg-gray-100 py-2 px-4 cursor-pointer text-gray-800 font-semibold ${showHtml ? "hover:bg-gray-200" : "bg-gray-300"}`}>CSS</button>
                             </div>
                         </div>
-                        {showHtml ? <CodeArea key="html" state={BodyForCss} setState={setBodyForCss} /> 
-                            : <CodeArea key="css" state={css} setState={setCss} />
+                        {showHtml ? <CodeArea key="html" state={BodyForCss} setState={setBodyForCss} adjustHeight={true} /> 
+                            : <CodeArea key="css" state={css} setState={setCss} adjustHeight={true} />
                         }
                     </div>
                     <div className="h-full w-1/2 ">
